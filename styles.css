@@ -11,6 +11,11 @@
   --primary: #2563eb;     /* blue-600 */
   --shadow: 0 10px 30px rgba(2, 6, 23, 0.06);
   --nav-h: 64px;
+  /* Chrome (nav/footer) theme */
+  --chrome-bg: #003366;          /* dark blue */
+  --chrome-text: #ffffff;        /* white text */
+  --chrome-hover: #93c5fd;       /* blue-300 */
+  --chrome-border: rgba(255, 255, 255, 0.12);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -59,8 +64,8 @@ body {
   left: 0;
   right: 0;
   z-index: 100;
-  background: #ffffff;
-  border-bottom: 1px solid var(--border);
+  background: var(--chrome-bg);
+  border-bottom: 1px solid var(--chrome-border);
   box-shadow: 0 4px 14px rgba(2, 6, 23, 0.06);
 }
 
@@ -73,11 +78,16 @@ body {
 
 .brand {
   display: inline-block;
-  color: var(--text);
+  color: var(--chrome-text);
   text-decoration: none;
   font-weight: 700;
   font-size: 1.1rem;
   padding: 10px 0;
+}
+
+.brand:hover,
+.brand:focus {
+  color: var(--chrome-hover);
 }
 
 .nav-toggle {
@@ -95,7 +105,7 @@ body {
   display: block;
   width: 22px;
   height: 2px;
-  background: var(--text);
+  background: var(--chrome-text);
   margin: 3px 0;
   border-radius: 2px;
 }
@@ -118,21 +128,22 @@ body {
   top: var(--nav-h);
   right: 0;
   left: 0;
-  background: #ffffff;
-  border-bottom: 1px solid var(--border);
+  background: var(--chrome-bg);
+  border-bottom: 1px solid var(--chrome-border);
   box-shadow: 0 8px 24px rgba(2, 6, 23, 0.06);
 }
 
 .nav a {
   display: block;
   padding: 14px 20px;
-  color: var(--text);
+  color: var(--chrome-text);
   text-decoration: none;
 }
 
 .nav a:hover,
 .nav a:focus {
-  background: rgba(2, 6, 23, 0.04);
+  color: var(--chrome-hover);
+  background: rgba(255, 255, 255, 0.06);
 }
 
 /* Show menu when toggled (mobile) */
@@ -218,9 +229,19 @@ body {
 /* Footer */
 .site-footer {
   padding: 24px 0 40px;
-  color: var(--muted);
-  border-top: 1px solid var(--border);
+  color: var(--chrome-text);
+  background: var(--chrome-bg);
+  border-top: 1px solid var(--chrome-border);
   text-align: center;
+}
+
+.site-footer a {
+  color: var(--chrome-text);
+}
+
+.site-footer a:hover,
+.site-footer a:focus {
+  color: var(--chrome-hover);
 }
 
 /* Sections */
