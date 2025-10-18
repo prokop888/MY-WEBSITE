@@ -254,6 +254,17 @@ body {
   box-shadow: var(--shadow);
 }
 
+/* Contact section map */
+.contact iframe {
+  display: block;          /* center with auto margins */
+  width: 100%;
+  max-width: 800px;
+  height: 300px;
+  margin: 20px auto;       /* top/bottom spacing, centered */
+  border: 0;               /* no border */
+  border-radius: 10px;     /* rounded corners */
+}
+
 .contact-form { display: grid; gap: 12px; max-width: 560px; }
 .contact-form input,
 .contact-form textarea {
